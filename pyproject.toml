@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "delivery-service"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.3.5"
+fastapi = "^0.115.12"
+pydantic = "^2.11.4"
+sqlalchemy = "^2.0.40"
+pydantic-settings = "^2.9.1"
+asyncmy = "^0.2.10"
+alembic = "^1.15.2"
+pymysql = "^1.1.1"
+cryptography = "^44.0.2"
+uvicorn = "^0.34.2"
+httpx = "^0.28.1"
+anyio = "^4.9.0"
+aio-pika = "^9.5.5"
+redis = "^6.0.0"
+mypy = "^1.15.0"
+ruff = "^0.11.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+ignore = ["E501"]
+select = ["E", "F", "W", "I"]
+
+[tool.mypy]
+python_version = "3.12"
+exclude = "migrations"
+strict = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+ignore_missing_imports = true
+no_implicit_optional = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unreachable = true
+allow_redefinition = true
+disallow_subclassing_any = false
